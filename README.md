@@ -1,8 +1,38 @@
-# Realtor App
+Realtor api is written in Nest JS framework and should serve as decent example for production ready backend. Some of the features that are implemented:
 
-Api is written in Nest JS framework and should serve as decent example for production ready backend. Some of the features that are implemented:
-
-- [ ] Database integration with Prisma and SQL
+- [x] Database integration with Prisma and Postgres
 - [ ] Authentication - Login, Register
 - [ ] Authorization
 - [ ] Testing
+
+### Getting started
+
+In order to run this app you should have Node and Nest JS installed. Once you clone this repo, run:
+
+```bash
+  npm install
+```
+
+After installing your dependencies create your `.env` file in the root folder
+
+```bash
+  touch .env
+```
+
+This app uses Prisma as ORM and Postgres. I chose [Neon](https://neon.tech) as cloud db provider, it's pretty simple to set up and get connection uri which you can add to your `.env` file.
+
+```
+  DATABASE_URL="your postgres uri goes here"
+```
+
+After that, we can use prisma to push data to db and be in sync
+
+```bash
+  npx prisma db push
+```
+
+User Prisma Studio to interact with our database in browser
+
+```bash
+  npx prisma studio
+```
